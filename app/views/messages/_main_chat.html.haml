@@ -10,14 +10,12 @@
         Edit
   .message-list
     = render "message-list"
-    = render "message-list"
-    = render "message-list"
   .message-form
     .form
-      %input.form__message-text{:type => "text", :placeholder => "type a message"}
+      %input.form__message-text{type: "text", placeholder: "type a message"}
       %label{class: "form__img-tag"}
         = icon('far', 'image')
         .form__img-tag--input
           %input{type: "file"}
     .btn
-      %input.btn{:type => "submit", :value => "Send"}
+      %input.btn{type: "submit", value: "Send"}
