@@ -1,0 +1,23 @@
+.main-chat
+  .group-info
+    .group-info__name
+      .group-info__name--name
+        techcamp
+      .group-info__name--member
+        Member : kazuki.afb
+    .group-info__btn
+      = link_to "#", class:"edit" do
+        Edit
+  .message-list
+    = render "message-list"
+    = render "message-list"
+    = render "message-list"
+  .message-form
+    .form
+      %input.form__message-text{:type => "text", :placeholder => "type a message"}
+      %label{class: "form__img-tag"}
+        = icon('far', 'image')
+        .form__img-tag--input
+          %input{type: "file"}
+    .btn
+      %input.btn{:type => "submit", :value => "Send"}
