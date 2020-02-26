@@ -2,12 +2,12 @@
   .user-name
     .user-name__frame
       .user-name__frame--left
-        kazuki.afb
+        = current_user.name
       .user-name__frame--right
         = link_to "#", class:"btn" do
           = icon('far', 'edit')
           %span<>
-        = link_to "#", class:"btn" do
+        = link_to edit_user_path(current_user), class:"btn" do
           = icon('fas', 'cog')
   .group-list
     = render "groups"
