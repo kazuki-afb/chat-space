@@ -4,13 +4,20 @@
       .user-name__frame--left
         = current_user.name
       .user-name__frame--right
-        = link_to "#", class:"btn" do
+        = link_to new_group_path, class:"btn" do
           = icon('far', 'edit')
           %span<>
         = link_to edit_user_path(current_user), class:"btn" do
           = icon('fas', 'cog')
   .group-list
-    = render "groups"
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#', class: "group" do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
+
 
 
 
