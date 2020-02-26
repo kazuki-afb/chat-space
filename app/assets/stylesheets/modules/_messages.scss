@@ -40,10 +40,11 @@ $blue:#38AEF0;
     .group-list {
       background-color: #2f3e51;
       height: calc(100% - 100px);
-      .groups {
+      .group {
         height: 91px;
         width: 100%;
-        color: white;
+        color: $white;
+        text-decoration: none;
         &__name {
           font-size: 15px;
           padding: 20px 20px 5px 20px;
