@@ -1,15 +1,17 @@
 .main-chat
   .group-info
     .group-info__name
-      .group-info__name--name
-        techcamp
+      .group-info__name--user-name
+        = @group.name
       .group-info__name--member
-        Member : kazuki.afb
+        Member : 
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     .group-info__btn
-      = link_to "#", class:"edit" do
+      = link_to edit_group_path(@group.id), class:"edit" do
         Edit
-  .message-list
-    = render "message-list"
+  .messages
+    = render @messages
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'

@@ -68,7 +68,7 @@ $blue:#38AEF0;
       &__name {
         width: calc(100% - 152px);
         margin-left: 40px;
-        &--name {
+        &--user-name {
           font-size: 20px;
           color: #333333;
           padding-top: 35px;
@@ -94,7 +94,7 @@ $blue:#38AEF0;
       
       }
     }
-    .message-list {
+    .messages {
       background-color: #fafafa;
       height: calc(100% - 100px - 90px);
       padding-left: 40px;
@@ -103,7 +103,7 @@ $blue:#38AEF0;
         display: inline-block;
         height: 16px;
         display: inline-flex;
-        &__name {
+        &__user-name {
           font-size: 16px;
           color: #333333;
         }
