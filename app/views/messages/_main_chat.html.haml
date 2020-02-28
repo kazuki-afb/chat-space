@@ -10,12 +10,11 @@
         Edit
   .message-list
     = render "message-list"
-  .message-form
-    .form
-      %input.form__message-text{type: "text", placeholder: "type a message"}
-      %label{class: "form__img-tag"}
-        = icon('far', 'image')
-        .form__img-tag--input
-          %input{type: "file"}
-    .btn
-      %input.btn{type: "submit", value: "Send"}
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
